@@ -16,7 +16,7 @@ git clone https://github.com/epiforecasts/schedule.git
 . schedule/setup/docker.sh
 ```
 
-3. Set up credential files at `~/.`:
+3. Set up credential files at `~/.` (using `nano ~/.gitconfig` etc.):
 
 ```
 .gitconfig:
