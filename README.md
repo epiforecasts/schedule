@@ -42,7 +42,7 @@ password github-pat
 
 ## Jobs
 
-Individual jobs are defined in `jobs` as `bash` scripts and are run in one of the container environments defined in `setup`.
+Individual jobs are defined in `jobs` as `bash` scripts and use one of the container environments defined in `setup`.
 
 ## Schedule
 
