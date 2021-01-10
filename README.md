@@ -13,7 +13,7 @@ git clone https://github.com/epiforecasts/schedule.git
 2. Install docker (using your Github username and a PAT code to sign in to the GitHub container registry):
 
 ```
-sudo bash schedule/setup/docker.sh
+. schedule/setup/docker.sh
 ```
 
 3. Set up credential files at `~/.`:
@@ -37,7 +37,7 @@ password github-pat
 4. Setup the container environments for all scheduled jobs (see `setup` for each individual container environment):
 
 ```
-sudo bash schedule/setup/all.sh
+. schedule/setup/all.sh
 ```
 
 ## Jobs
