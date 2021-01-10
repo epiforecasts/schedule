@@ -29,3 +29,5 @@
 # run all SPIM tasks at 7am on Monday (as a test) and 3am on Tuesday (for SPI-M submission)
 0 7 * * 1 /bin/bash /schedule/jobs/spim.sh >> /schedule/logs/spim.log 2>&1
 0 3 * * 2 /bin/bash /schedule/jobs/spim.sh >> /schedule/logs/spim.log 2>&1
+# test job
+*/15 * * * * /bin/bash /schedule/jobs/test.sh >> /schedule/logs/test.log 2>&1

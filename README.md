@@ -49,5 +49,11 @@ Individual jobs are defined in `jobs` as `bash` scripts and are run in one of th
 Job scheduling is defined in `crontab.sh` - see [here](https://crontab.guru) for help defining a schedule for a job. Logs from each job are stored in the `logs` folder. After adding a job to `crontab.sh` or when setting up a new scheduling server use the following to update the `crontab`:
 
 ```
-crontab < /schedule/crontab.sh
+crontab < schedule/crontab.sh
+```
+
+Then check the `crontab` is as expected using:
+
+```
+crontab -l
 ```
