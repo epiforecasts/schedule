@@ -28,4 +28,8 @@ Individual jobs are defined in `jobs` and are run in one of the container enviro
 
 ## Schedule
 
-Job scheduling is defined in `crontab.sh` - see [here](https://crontab.guru) for help defining a schedule for a job. Logs from each job are stored in the `logs` folder.
+Job scheduling is defined in `crontab.sh` - see [here](https://crontab.guru) for help defining a schedule for a job. Logs from each job are stored in the `logs` folder. After adding a job to `crontab.sh` or when setting up a new scheduling server using the following to update the `crontab`:
+
+```
+crontab < /schedule/crontab.sh
+```
