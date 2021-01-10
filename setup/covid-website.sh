@@ -1,7 +1,7 @@
 #!bin/bash
 
 # get environment variables
-bash setup/env-var.sh
+bash schedule/setup/env-var.sh
 # stand up container
 sudo docker pull docker.pkg.github.com/epiforecasts/covid/covid:latest
 sudo docker tag docker.pkg.github.com/epiforecasts/covid/covid:latest covid-website
