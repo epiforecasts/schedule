@@ -1,7 +1,7 @@
 #!bin/bash
 
 # get environment variables
-bash schedule/setup/env-var.sh
+source schedule/setup/env-var.sh
 # set up EpiNow2 based docker container for forecasting
 sudo docker pull docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
 sudo docker tag docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest forecast
