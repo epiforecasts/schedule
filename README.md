@@ -1,6 +1,6 @@
 # Schedule EpiForecast Routine Server Jobs
 
-This repository contains the setup scripts, job scripts and scheduling information required to automate routine EpiForecast jobs. It uses CRON, docker and bash.
+This repository contains the setup scripts, job scripts and scheduling information required to automate routine EpiForecast jobs. It uses CRON, docker, and bash.
 
 ## Setup
 
