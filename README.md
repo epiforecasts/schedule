@@ -16,7 +16,25 @@ git clone https://github.com/epiforecasts/schedule.git
 sudo bash schedule/setup/docker.sh
 ```
 
-3. Setup the container environments for all scheduled jobs (see `setup` for each individual container environment):
+3. Set up credential files at `~/.`:
+
+```
+.gitconfig:
+[user]
+    name = thomas the tank engine
+    email = thomas.the.tank.engine@nope.com
+
+.netrc:
+machine github.com
+login TtheTank
+password github-pat
+
+machine api.github.com
+login TtheTank
+password github-pat
+```
+
+4. Setup the container environments for all scheduled jobs (see `setup` for each individual container environment):
 
 ```
 sudo bash schedule/setup/all.sh
