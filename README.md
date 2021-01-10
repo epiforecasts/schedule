@@ -16,7 +16,7 @@ git clone https://github.com/epiforecasts/schedule.git
 sudo bash schedule/setup/docker.sh
 ```
 
-3. Setup the container environments for all scheduled jobs (see `setup` for each individual container environments):
+3. Setup the container environments for all scheduled jobs (see `setup` for each individual container environment):
 
 ```
 sudo bash schedule/setup/all.sh
@@ -28,4 +28,4 @@ Individual jobs are defined in `jobs` and are run in one of the container enviro
 
 ## Schedule
 
-Job scheduling is defined in `cron.sh` - see [here](https://crontab.guru) for help defining a schedule for a job.
+Job scheduling is defined in `crontab.sh` - see [here](https://crontab.guru) for help defining a schedule for a job. Logs from each job are stored in the `logs` folder.
