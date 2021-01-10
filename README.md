@@ -22,7 +22,7 @@ sudo bash schedule/setup/docker.sh
 .gitconfig:
 [user]
     name = thomas the tank engine
-    email = thomas.the.tank.engine@nope.com
+    email = thomas.the.tank.engine@engines.com
 
 .netrc:
 machine github.com
