@@ -7,6 +7,6 @@
  # clone in Germany/Poland forecasting repository
  sudo docker exec forecast git clone  https://github.com/epiforecasts/covid-german-forecasts.git
  # install us dependencies
- sudo docker exec forecast cd covid-us-forecasts && Rscript -e "devtools::install_dev_deps()"
+ sudo docker exec -w /home/rstudio/covid-us-forecasts forecast Rscript -e "devtools::install_dev_deps()"
  # install germany dependencies
- sudo docker exec forecast cd covid-german-forecasts && Rscript -e "devtools::install_dev_deps()"
+ sudo docker exec -w /home/rstudio/covid-german-forecasts forecast Rscript -e "devtools::install_dev_deps()"
