@@ -10,4 +10,4 @@ docker exec -w /home/rstudio/covid-german-forecasts forecast Rscript -e 'devtool
 docker exec -w /home/rstudio/covid-german-forecasts forecast bash rt-forecast/update.sh
 
 # update github with new forecast
-docker exec -w /home/rstudio/covid-german-forecasts "git add -A ; git commit -m 'automated forecast update' ; git pull -Xours; git push"
+docker exec -w /home/rstudio/covid-german-forecasts forecast  bash -c "git add -A ; git commit -m 'automated forecast update' ; git pull -Xours; git push"
