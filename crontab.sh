@@ -16,7 +16,7 @@
 #
 # m h  dom mon dow   command
 # update the covid website at 6 am, 12am, 6pm and 12 pm every day
-#0 */6 * * * /bin/bash schedule/jobs/covid-website.sh >> schedule/logs/covid-website.log 2>&1
+0 */6 * * * /bin/bash schedule/jobs/covid-website.sh >> schedule/logs/covid-website.log 2>&1
 # run the US forecast on Monday at 12.30 am
 30 0 * * 1 /bin/bash schedule/jobs/us-covid-forecast.sh >> schedule/logs/us-covid-forecast.log 2>&1
 # run the Germany/Poland forecast on Monday at 4 am
