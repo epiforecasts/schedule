@@ -4,7 +4,7 @@
 docker exec -w /home/rstudio/covid-german-forecasts forecast git pull -Xours
 
 # update dependencies
-docker exec -w /home/rstudio/covid-german-forecasts forecast Rscript -e 'devtools::install_dev_deps()'
+docker exec -w /home/rstudio/covid-german-forecasts forecast Rscript -e 'devtools::install_github("epiforecasts/covid-german-forecasts")'
 
 # simulate cases from Rt crowd forecast
 docker exec -w /home/rstudio/covid-german-forecasts forecast Rscript rt-crowd-forecast/simulate-cases.R
