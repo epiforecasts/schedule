@@ -3,6 +3,9 @@
 # check repository is up to date and update dependencies
 . schedule/jobs/germany.covid.forecasts/pull.sh
 
+# update data
+docker exec -w /home/rstudio/covid.german.forecasts forecast RscriptRscript data-raw/update.R
+
 # Redeploy forecast app (to update data)
 docker exec -w /home/rstudio/covid.german.forecasts forecast Rscript crowd-forecast/redeploy.R
 
