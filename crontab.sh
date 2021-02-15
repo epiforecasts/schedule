@@ -25,6 +25,6 @@
 0 17 * * 6 /bin/bash schedule/jobs/germany.covid.forecasts/crowd-data.sh > schedule/logs/germany.covid.forecasts/crowd-data.log 2>&1
 # update crowd forecasts on a Tuesday at 1 pm
 0 13 * * 2 /bin/bash schedule/jobs/germany.covid.forecasts/crowd.sh > schedule/logs/germany.covid.forecasts/crowd.log 2>&1
-# run all SPIM tasks at 7am on Monday (as a test) and 2am on Tuesday (for SPI-M submission)
-0 7 * * 1 /bin/bash schedule/jobs/spim.sh > schedule/logs/spim.log 2>&1
+# run all SPIM tasks at 3am on Monday (as a test) and 2am on Tuesday (for SPI-M submission)
+0 3 * * 1 /bin/bash schedule/jobs/spim.sh > schedule/logs/spim.log 2>&1
 0 2 * * 2 /bin/bash schedule/jobs/spim.sh > schedule/logs/spim.log 2>&1
