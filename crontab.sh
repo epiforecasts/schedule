@@ -17,8 +17,9 @@
 # m h  dom mon dow   command
 # update the schedule folder at 11pm
 11 * * * * /bin/bash cd schedule && git pull -Xtheirs
-# update the covid website at 6 am, 12am, 6pm and 12 pm every day
-0 */6 * * * /bin/bash schedule/jobs/covid-website.sh > schedule/logs/covid-website.log 2>&1
+# update the covid website at 6 am and pm
+0 6 * * * /bin/bash schedule/jobs/covid-website.sh > schedule/logs/covid-website.log 2>&1
+0 18 * * * /bin/bash schedule/jobs/covid-website.sh > schedule/logs/covid-website.log 2>&1
 # run the US forecast on Monday at 12.30 am
 30 0 * * 1 /bin/bash schedule/jobs/us-covid-forecast.sh > schedule/logs/us-covid-forecast.log 2>&1
 # run the Germany/Poland forecast on Monday at 4 am
