@@ -1,16 +1,16 @@
 #!bin/bash
 
 # check repository is up to date and update dependencies
-. schedule/jobs/germany.covid.forecasts/pull.sh
+. schedule/jobs/europe-covid-forecast/pull.sh
 
 # update data
-docker exec -w /home/rstudio/covid.german.forecasts forecast Rscript data-raw/update.R
+docker exec -w /home/rstudio/europe-covid-forecast forecast Rscript data-raw/update.R
 
 # Redeploy forecast app (to update data)
-docker exec -w /home/rstudio/covid.german.forecasts forecast Rscript crowd-forecast/redeploy.R
+docker exec -w /home/rstudio/europe-covid-forecast forecast Rscript crowd-forecast/redeploy.R
 
 # rerun evaluation / leaderboard
-docker exec -w /home/rstudio/covid.german.forecasts forecast bash evaluation/update.sh
+docker exec -w /home/rstudio/europe-covid-forecast forecast bash evaluation/update.sh
 
 # update github with new forecast
-docker exec -w /home/rstudio/covid.german.forecasts forecast  bash -c "git add -A ; git commit -m 'automated crowd data update' ; git pull -Xours; git push"
+docker exec -w /home/rstudio/europe-covid-forecast forecast  bash -c "git add -A ; git commit -m 'automated crowd data update' ; git pull -Xours; git push"
