@@ -26,8 +26,8 @@
 30 0 * * 1 /bin/bash schedule/jobs/us-covid-forecast.sh > schedule/logs/us-covid-forecast.log 2>&1
 # run ECDC forecast at 2am on Monday
 0 2 * * 1 /bin/bash schedule/jobs/europe-covid-forecast/rt.sh > schedule/logs/europe-covid-forecast/rt.log 2>&1
-# run the Germany/Poland forecast on Monday at 4 am
-0 4 * * 1 /bin/bash schedule/jobs/germany.covid.forecasts/rt.sh > schedule/logs/germany.covid.forecasts/rt.log 2>&1
+# run the Germany/Poland forecast on Sunday at 9pm
+0 20 * * 0 /bin/bash schedule/jobs/germany.covid.forecasts/rt.sh > schedule/logs/germany.covid.forecasts/rt.log 2>&1
 # update European crowd forecast data on Sunday at 7.30 am
 30 7 * * 0 /bin/bash schedule/jobs/europe-covid-forecast/crowd-data.sh > schedule/logs/europe-covid-forecast/crowd-data.log 2>&1
 # update European crowd forecast submission on Monday at 10 pm
