@@ -31,7 +31,7 @@
 # update European crowd forecast data on Sunday at 7.30 am
 30 7 * * 0 /bin/bash schedule/jobs/europe-covid-forecast/crowd-data.sh > schedule/logs/europe-covid-forecast/crowd-data.log 2>&1
 # update European crowd forecast submission on Monday at 10 pm
-10 21 * * 1 /bin/bash schedule/jobs/europe-covid-forecast/crowd.sh > schedule/logs/europe-covid-forecast/crowd.log 2>&1
+10 21 * * 2 /bin/bash schedule/jobs/europe-covid-forecast/crowd.sh > schedule/logs/europe-covid-forecast/crowd.log 2>&1
 # run all SPIM tasks at 7am on Monday (as a test) and 2am on Tuesday (for SPI-M submission)
 0 7 * * 1 /bin/bash schedule/jobs/spim.sh > schedule/logs/spim.log 2>&1
 0 2 * * 2 /bin/bash schedule/jobs/spim.sh > schedule/logs/spim.log 2>&1
