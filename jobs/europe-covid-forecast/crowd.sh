@@ -6,6 +6,9 @@
 # update crowd forecast
 docker exec -w /home/rstudio/europe-covid-forecast forecast bash crowd-forecast/update.sh
 
+# update crowd rt forecast
+docker exec -w /home/rstudio/europe-covid-forecast forecast bash crowd-rt-forecast/update.sh
+
 # update evaluations
 docker exec -w /home/rstudio/europe-covid-forecast forecast bash evaluation/update.sh
 
