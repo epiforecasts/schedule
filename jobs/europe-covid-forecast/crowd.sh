@@ -3,11 +3,14 @@
 # check repository is up to date and update dependencies
 . schedule/jobs/europe-covid-forecast/pull.sh
 
-# update crowd forecast
-docker exec -w /home/rstudio/europe-covid-forecast forecast bash crowd-forecast/update.sh
+# update direct crowd forecast
+docker exec -w /home/rstudio/europe-covid-forecast forecast bash crowd-direct-forecast/update.sh
 
 # update crowd rt forecast
 docker exec -w /home/rstudio/europe-covid-forecast forecast bash crowd-rt-forecast/update.sh
+
+# update crowd forecast
+docker exec -w /home/rstudio/europe-covid-forecast forecast Rscript crowd-forecast/update.R
 
 # update evaluations
 docker exec -w /home/rstudio/europe-covid-forecast forecast bash evaluation/update.sh
