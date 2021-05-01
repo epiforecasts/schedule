@@ -13,7 +13,10 @@ docker exec -w /home/rstudio/europe-covid-forecast forecast bash crowd-rt-foreca
 docker exec -w /home/rstudio/europe-covid-forecast forecast Rscript crowd-forecast/update.R
 
 # update evaluations
-docker exec -w /home/rstudio/europe-covid-forecast forecast bash evaluation/update.sh
+docker exec -w /home/rstudio/europe-covid-forecast forecast bash reports/update.sh
+
+# update evaluation website
+docker exec -w /home/rstudio/europe-covid-forecast forecast bash reports/update-website.sh
 
 # update github with new forecast
 docker exec -w /home/rstudio/europe-covid-forecast forecast  bash -c "git add -A ; git commit -m 'automated crowd update' ; git pull -Xours; git push"
