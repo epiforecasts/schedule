@@ -18,7 +18,7 @@
 # update the schedule folder at 11pm
 0 11 * * * /bin/bash cd schedule && git pull -Xtheirs >> schedule/logs/schedule.log 2>&1
 # update the crontab at 11.30pm
-30 11 * * * crontab < schedule/crontab.sh >> schedule/logs/schedule.log 2>&1
+30 11 * * * /bin/bash schedule/jobs/crontab.sh >> schedule/logs/crontab.log 2>&1
 # update the covid website at 6 am and pm
 0 6 * * * /bin/bash schedule/jobs/covid-website.sh >> schedule/logs/covid-website.log 2>&1
 0 18 * * * /bin/bash schedule/jobs/covid-website.sh >> schedule/logs/covid-website.log 2>&1
