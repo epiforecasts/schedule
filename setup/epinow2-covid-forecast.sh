@@ -10,7 +10,11 @@ docker run -d -p 12003:8787 --name forecast --mount ${MOUNT_NETRC} --mount ${MOU
 docker exec forecast git clone https://github.com/epiforecasts/covid-us-forecasts.git
 # clone in Germany/Poland forecasting repository
 docker exec forecast git clone  https://github.com/epiforecasts/covid.german.forecasts.git
+# clone in ECDC forecasting repository
+docker exec forecast git clone  https://github.com/epiforecasts/europe-covid-forecast.git
 # install us dependencies
 docker exec -w /home/rstudio/covid-us-forecasts forecast Rscript -e "devtools::install_dev_deps()"
 # install germany dependencies
 docker exec -w /home/rstudio/covid.german.forecasts forecast Rscript -e "devtools::install_dev_deps()"
+# install ecdc dependencies
+docker exec -w /home/rstudio/europe-covid-forecast forecast Rscript -e "devtools::install_dev_deps()"
