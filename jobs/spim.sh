@@ -3,6 +3,9 @@
 # check repository is up to date
 docker exec -w /home/rstudio/covid-uk spim git pull -Xours
 
+# update EpiNow2
+docker exec -w /home/rstudio/covid-uk spim Rscript -e 'install.packages("EpiNow2", repos = "https://epiforecasts.r-universe.dev")'
+
 # run forecasts
 docker exec -w /home/rstudio/covid-uk spim bash bin/update-forecasts.sh
 
