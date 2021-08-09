@@ -1,5 +1,8 @@
 #!bin/bash
 
+# make sure required container is running
+docker start spim
+
 # check repository is up to date
 docker exec -w /home/rstudio/covid-uk spim git pull -Xours
 
