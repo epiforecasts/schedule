@@ -8,3 +8,6 @@
 
 # set up a container to use for SPI-M submissions
 . schedule/setup/spim.sh
+
+# setup the container for germany nowcasting
+. schedule/setup/germany-nowcast.sh
