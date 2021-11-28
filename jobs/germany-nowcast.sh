@@ -9,5 +9,3 @@ docker exec -u vscode -w /eval-germany-sp-nowcasting frosty_roentgen git pull
 
 # run the updater script
 docker exec -u vscode -w /eval-germany-sp-nowcasting frosty_roentgen  bash bin/update-targets-and-publish.sh
-
-docker exec -u vscode -w /eval-germany-sp-nowcasting frosty_roentgen chmod -R ugo+rw .
