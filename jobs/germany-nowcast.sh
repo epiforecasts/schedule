@@ -10,4 +10,5 @@ docker exec -u vscode -w /eval-germany-sp-nowcasting eval-germany-sp-nowcasting 
 # run the updater script
 docker exec -u vscode -w /eval-germany-sp-nowcasting eval-germany-sp-nowcasting  bash bin/update-targets-and-publish.sh
 
+# we need to do a manual push as the vscode user may not have git credentials
 docker exec  -w /eval-germany-sp-nowcasting eval-germany-sp-nowcasting git push
