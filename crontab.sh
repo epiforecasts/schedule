@@ -41,3 +41,5 @@
 01 9 * * * /bin/bash schedule/jobs/germany-nowcast.sh > schedule/logs/germany-nowcast.log 2>&1
 # run Germany nowcasting at 10:31 every day in case the data was very late
 31 10 * * * /bin/bash schedule/jobs/germany-nowcast.sh > schedule/logs/germany-nowcast.log 2>&1
+# run Germany nowcasting at 12:15 every day in case the data was very very late
+15 12 * * * /bin/bash schedule/jobs/germany-nowcast.sh > schedule/logs/germany-nowcast.log 2>&1
