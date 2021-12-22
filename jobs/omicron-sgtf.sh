@@ -7,7 +7,7 @@ docker start hungry_gates
 docker exec -u vscode -w /workspaces/omicron-sgtf-forecast hungry_gates git pull
 
 # run the updater script
-docker exec -u vscode -w /workspaces/omicron-sgtf-forecast hungry_gates  bash bin/update-if-new-data.sh
+docker exec -u vscode -w /workspaces/omicron-sgtf-forecast hungry_gates  bash bin/update-and-publish.sh
 
 # copy in credentials and git as root
 docker cp $(realpath ~)/.gitconfig hungry_gates:/root/.gitconfig
