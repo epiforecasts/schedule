@@ -37,3 +37,5 @@
 01 5 * * * /bin/bash schedule/jobs/germany-nowcast.sh > schedule/logs/germany-nowcast.log 2>&1
 # run Germany nowcasting at 07:01 every day in case the data was late
 01,16,31,46 5,6,7,8,9,10,11 * * * /bin/bash schedule/jobs/germany-nowcast.sh > schedule/logs/germany-nowcast.log 2>&1
+#Update SGTF Omicron tracking
+05 1,13 * * * /bin/bash schedule/jobs/omicron-sgtf.sh > schedule/logs/omicron-sgtf.log 2>&1
