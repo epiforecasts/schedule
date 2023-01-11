@@ -19,19 +19,5 @@
 0 11 * * * /bin/bash cd schedule && git pull -Xtheirs >> schedule/logs/schedule.log 2>&1
 # update the crontab at 11.30pm
 30 11 * * * /bin/bash schedule/jobs/crontab.sh >> schedule/logs/crontab.log 2>&1
-# update the covid website every 8 hours
-15 */8 * * * /bin/bash schedule/jobs/covid-website.sh >> schedule/logs/covid-website.log 2>&1
-# run the US forecast on Monday at 12.30 am
-30 0 * * 1 /bin/bash schedule/jobs/us-covid-forecast.sh > schedule/logs/us-covid-forecast.log 2>&1
 # run ECDC forecast at 8am on Sunday
 0 8 * * 0 /bin/bash schedule/jobs/europe-covid-forecast/rt.sh > schedule/logs/europe-covid-forecast/rt.log 2>&1
-# run the Germany/Poland forecast on Monday at 4 am
-0 4 * * 1 /bin/bash schedule/jobs/germany.covid.forecasts/rt.sh > schedule/logs/germany.covid.forecasts/rt.log 2>&1
-# update European crowd forecast data on Sunday at 7.30 am
-30 7 * * 0 /bin/bash schedule/jobs/europe-covid-forecast/crowd-data.sh > schedule/logs/europe-covid-forecast/crowd-data.log 2>&1
-# update European crowd forecast submission on Monday at 9.05 pm UK time
-05 20 * * 1 /bin/bash schedule/jobs/europe-covid-forecast/crowd.sh > schedule/logs/europe-covid-forecast/crowd.log 2>&1
-# run Germany nowcasting at 05:00 every day
-01 5 * * * /bin/bash schedule/jobs/germany-nowcast.sh > schedule/logs/germany-nowcast.log 2>&1
-# run Germany nowcasting at 07:01 every day in case the data was late
-01,16,31,46 5,6,7,8,9,10,11 * * * /bin/bash schedule/jobs/germany-nowcast.sh > schedule/logs/germany-nowcast.log 2>&1
