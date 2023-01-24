@@ -21,3 +21,5 @@
 30 11 * * * /bin/bash schedule/jobs/crontab.sh >> schedule/logs/crontab.log 2>&1
 # run ECDC forecast at 8am on Sunday
 0 8 * * 0 /bin/bash schedule/jobs/europe-covid-forecast/rt.sh > schedule/logs/europe-covid-forecast/rt.log 2>&1
+# run inc2prev at 3pm on Friday
+0 15 * * 5 /bin/bash schedule/jobs/inc2prev-ons/ons.sh > schedule/logs/inc2prev-ons/ons.log 2>&1
