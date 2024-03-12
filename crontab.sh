@@ -19,5 +19,4 @@
 0 11 * * * /bin/bash cd schedule && git pull -Xtheirs >> schedule/logs/schedule.log 2>&1
 # update the crontab at 11.30pm
 30 11 * * * /bin/bash schedule/jobs/crontab.sh >> schedule/logs/crontab.log 2>&1
-# run ECDC forecast at 8am on Sunday
-0 8 * * 0 /bin/bash schedule/jobs/europe-covid-forecast/rt.sh > schedule/logs/europe-covid-forecast/rt.log 2>&1
+
